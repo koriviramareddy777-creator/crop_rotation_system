@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Crop Rotation Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">🌱 Crop Rotation</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#crops">Crops</a>
+            <a href="#recommendation">Recommendation</a>
+            <a href="#planner">Planner</a>
+            <a href="#history">History</a>
+            <a href="#soil">Soil Health</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Smart Crop Rotation Management System</h1>
+
+            <p>
+                Plan your crops wisely, improve soil fertility,
+                and support sustainable agriculture.
+            </p>
+
+            <a href="#recommendation" class="btn">
+                Get Crop Recommendation
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="features">
+
+        <h2>Our Features</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <h3>🌾 Crop Information</h3>
+                <p>Explore different crops and their growing seasons.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌱 Crop Recommendation</h3>
+                <p>Get suggestions for the next crop based on previous crops.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📅 Seasonal Planner</h3>
+                <p>Plan crops according to agricultural seasons.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌍 Soil Management</h3>
+                <p>Learn how crop rotation supports soil health.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Crop Information -->
+    <section id="crops" class="section">
+
+        <h2>Popular Crops</h2>
+
+        <div class="crop-container">
+
+            <div class="crop-card">
+                <h3>🌾 Paddy</h3>
+                <p>Season: Kharif</p>
+                <p>Water Requirement: High</p>
+            </div>
+
+            <div class="crop-card">
+                <h3>🌽 Maize</h3>
+                <p>Season: Kharif / Rabi</p>
+                <p>Water Requirement: Medium</p>
+            </div>
+
+            <div class="crop-card">
+                <h3>🥜 Groundnut</h3>
+                <p>Season: Kharif / Rabi</p>
+                <p>Water Requirement: Medium</p>
+            </div>
+
+            <div class="crop-card">
+                <h3>🌿 Black Gram</h3>
+                <p>Season: Kharif / Rabi</p>
+                <p>Water Requirement: Low to Medium</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Crop Recommendation -->
+    <section id="recommendation" class="section">
+
+        <h2>Crop Recommendation</h2>
+
+        <p>Select your previous crop to get suggestions.</p>
+
+        <label for="previousCrop">Previous Crop:</label>
+
+        <select id="previousCrop">
+
+            <option value="">Select Crop</option>
+            <option value="Paddy">Paddy</option>
+            <option value="Maize">Maize</option>
+            <option value="Groundnut">Groundnut</option>
+            <option value="Black Gram">Black Gram</option>
+
+        </select>
+
+        <button type="button" onclick="recommendCrop()">
+            Recommend Crop
+        </button>
+
+        <div id="result"></div>
+
+    </section>
+
+
+    <!-- Seasonal Planner -->
+    <section id="planner" class="section">
+
+        <h2>Seasonal Crop Planner</h2>
+
+        <p>Select a season to explore suitable crops.</p>
+
+        <select id="season">
+
+            <option value="">Select Season</option>
+            <option value="Kharif">Kharif</option>
+            <option value="Rabi">Rabi</option>
+            <option value="Zaid">Zaid</option>
+
+        </select>
+
+        <button type="button" onclick="showSeasonCrops()">
+            View Crops
+        </button>
+
+        <div id="seasonResult"></div>
+
+    </section>
+
+
+    <!-- Crop Rotation History -->
+    <section id="history" class="section">
+
+        <h2>Crop Rotation History</h2>
+
+        <p>Example of a crop rotation sequence.</p>
+
+        <div class="crop-container">
+
+            <div class="crop-card">
+                <h3>🌾 First Season</h3>
+                <p>Paddy</p>
+            </div>
+
+            <div class="crop-card">
+                <h3>🌿 Second Season</h3>
+                <p>Black Gram</p>
+            </div>
+
+            <div class="crop-card">
+                <h3>🌽 Third Season</h3>
+                <p>Maize</p>
+            </div>
+
+            <div class="crop-card">
+                <h3>🥜 Fourth Season</h3>
+                <p>Groundnut</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Soil Health -->
+    <section id="soil" class="section">
+
+        <h2>Importance of Soil Health</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <h3>🌱 Soil Fertility</h3>
+                <p>Legume crops can help improve soil nitrogen availability.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌍 Soil Protection</h3>
+                <p>Crop rotation can help reduce soil erosion.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌾 Better Productivity</h3>
+                <p>Different crops use soil nutrients in different ways.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🐛 Pest Management</h3>
+                <p>Crop rotation can help interrupt some pest and disease cycles.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+
+        <h2>Contact Us</h2>
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="userName"
+                placeholder="Enter your name"
+                required
+            >
+
+            <input
+                type="email"
+                id="userEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Enter your feedback"
+                required
+            ></textarea>
+
+            <button type="submit">Submit Feedback</button>
+
+        </form>
+
+        <div id="contactResult"></div>
+
+    </section>
+
+
+    <!-- About Project -->
+    <section id="about" class="section">
+
+        <h2>About Our Project</h2>
+
+        <p>
+            Smart Crop Rotation Management System is a
+            web-based application designed to help farmers
+            plan crop cultivation using crop rotation methods.
+        </p>
+
+        <br>
+
+        <h3>Project Objectives</h3>
+
+        <p>
+            1. To provide information about different crops.
+            <br>
+            2. To suggest suitable crops after previous cultivation.
+            <br>
+            3. To provide seasonal crop planning.
+            <br>
+            4. To create awareness about soil fertility.
+            <br>
+            5. To encourage sustainable agriculture.
+        </p>
+
+        <br>
+
+        <h3>Technologies Used</h3>
+
+        <p>
+            HTML - Website Structure
+            <br>
+            CSS - Website Design
+            <br>
+            JavaScript - Website Functionality
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Smart Crop Rotation Management System</p>
+
+        <p>Developed as a CSE Mini Project</p>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>

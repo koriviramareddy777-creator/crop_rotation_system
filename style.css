@@ -1,0 +1,310 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8f2;
+    color: #263b2b;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #14532d;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #bbf7d0;
+}
+
+/* Home Section */
+.hero {
+    min-height: 420px;
+    background: linear-gradient(
+        rgba(10, 60, 25, 0.75),
+        rgba(10, 60, 25, 0.75)
+    ),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #84cc16;
+    color: #16351d;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #a3e635;
+}
+
+/* Common Sections */
+section {
+    padding: 55px 7%;
+}
+
+section h2 {
+    text-align: center;
+    color: #166534;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* Features */
+.features {
+    text-align: center;
+}
+
+.feature-container,
+.crop-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card,
+.crop-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover,
+.crop-card:hover {
+    transform: translateY(-7px);
+}
+
+.feature-card h3,
+.crop-card h3 {
+    color: #15803d;
+    margin-bottom: 12px;
+}
+
+/* Recommendation and Planner */
+#recommendation,
+#planner {
+    text-align: center;
+    background-color: #e5f5e7;
+    margin: 20px 7%;
+    border-radius: 12px;
+}
+
+#recommendation p,
+#planner p {
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 12px;
+    width: 220px;
+    max-width: 100%;
+    border: 1px solid #86a88c;
+    border-radius: 6px;
+    margin: 10px;
+    background-color: white;
+}
+
+button {
+    background-color: #15803d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #166534;
+}
+
+#result,
+#seasonResult {
+    margin: 20px auto 0;
+    padding: 15px;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 8px;
+    color: #166534;
+    font-weight: bold;
+    min-height: 20px;
+}
+
+/* About Section */
+#about {
+    text-align: center;
+}
+
+#about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 17px;
+}
+
+/* Footer */
+footer {
+    background-color: #14532d;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 900px) {
+    .feature-container,
+    .crop-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .feature-container,
+    .crop-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 35px 5%;
+    }
+
+    #recommendation,
+    #planner {
+        margin: 15px 5%;
+    }
+}
+/* Professional Website Enhancements */
+
+/* Smooth Card Animation */
+.feature-card,
+.crop-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover,
+.crop-card:hover {
+    box-shadow: 0 8px 20px rgba(20, 83, 45, 0.18);
+}
+
+/* Section Background */
+#crops {
+    background-color: #edf7ed;
+}
+
+#history {
+    background-color: #f0fdf4;
+}
+
+#soil {
+    background-color: #e5f5e7;
+}
+
+/* Section Paragraph */
+.section > p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Headings */
+section h2 {
+    letter-spacing: 0.5px;
+}
+
+/* Button Animation */
+button,
+.btn {
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: scale(1.04);
+}
+
+/* Footer Styling */
+footer p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 600px) {
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero-content h1 {
+        font-size: 27px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+}
